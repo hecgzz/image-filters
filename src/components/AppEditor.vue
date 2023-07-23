@@ -1,7 +1,7 @@
 <template>
   <div class="my-8">
-    <div class="flex flex-row">
-      <div class="basis-3/4 pr-4">
+    <div class="md:flex flex-row">
+      <div class="basis-full sm: md:basis-3/4 pr-4">
         <canvas class="w-full" ref="canvasEl"></canvas>
         <a class="bg-indigo-700 py-4 block w-full mt-2 text-center text-white text-xl" :href="canvasImgURL"
           download="image.png">
@@ -15,8 +15,8 @@
         </div>
 
       </div>
-      <div class="basis-1/4">
-        <h2 class="text-center text-2xl text-indigo-700">Filters</h2>
+      <div class="basis-full md:basis-1/4">
+        <h2 class="text-center py-4 md:py-0 text-2xl text-indigo-700">Filters</h2>
         <div class="text-white text-xl mt-4">
           <div class="grid grid-cols-2 justify-center gap-4">
             <button type="button" class="py-4 w-full" v-for="(filter, index) in filters" :key="index" :class="{
@@ -42,6 +42,9 @@
       </div>
     </div>
   </div>
+  <h3 class="text-center text-l text-indigo-700"><a href="https://github.com/hecgzz" target="_blank">Made with ❤️ by
+      Hector Gonzalez</a>
+  </h3>
 </template>
 
 <script setup lang="ts">
